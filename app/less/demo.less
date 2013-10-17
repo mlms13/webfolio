@@ -3,7 +3,6 @@
 body {
   background: #eee;
   font-family: "Open Sans", sans-serif;
-  margin: 30px;
 }
 ul.unstyled {
   list-style: none;
@@ -13,19 +12,28 @@ ul.unstyled {
 
 .portfolio-group {
   border-left: 6px solid #0ad;
-  margin: 0 60px;
+  margin-left: 40px; // to save space for date labels
   position: relative;
+
+  @media (min-width: 500px) {
+    margin-left: 60px; // to accomodate for larger font on larger screens
+  }
 }
 
 .year-label {
-  color: darken(@blue, 20%);
-  font: 400 36px/38px "Open Sans", sans-serif;
-  margin: 0 0 0 -60px;
+  color: darken(@blue, 10%);
+  font: 400 24px/1 "Open Sans", sans-serif;
+  margin: 0 0 0 -40px;
   position: absolute;
   -webkit-transform: translate(-100%, 0) rotate(-90deg);
   transform: translate(-100%, 0) rotate(-90deg);
   -webkit-transform-origin: right top;
   transform-origin: right top;
+
+  @media (min-width: 500px) {
+    font-size: 36px;
+    margin-left: -60px;
+  }
 }
 
 .portfolio-item {
