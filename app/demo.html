@@ -5,6 +5,13 @@
         <title>Webfolio Demo</title>
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet"/>
         <link rel="stylesheet" href="css/demo.css">
+        <script src="js/modernizr.js"></script>
+        <script>
+            yepnope({
+                test: Modernizr.mq('only all'),
+                nope: ['js/respond.js']
+            });
+        </script>
     </head>
     <body>
         <div class="portfolio-group">
